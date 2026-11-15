@@ -1,0 +1,105 @@
+{
+  "quick": false,
+  "n_windows": 10299,
+  "n_features": 561,
+  "n_subjects": 30,
+  "test_subjects": [
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "train_rows": 8013,
+  "test_rows": 2286,
+  "best_model": "Logistic Regression (561)",
+  "top_features": [
+    "tGravityAcc_mean_X",
+    "angle_X_gravityMean",
+    "tGravityAcc_min_X",
+    "tGravityAcc_energy_X",
+    "tGravityAcc_mean_Y",
+    "tGravityAcc_max_Y",
+    "tGravityAcc_min_Y",
+    "tGravityAcc_max_X",
+    "angle_Y_gravityMean",
+    "tGravityAcc_energy_Y",
+    "fBodyAccJerk_bandsEnergy_1_16",
+    "tBodyAccMag_std",
+    "tGravityAcc_arCoeff_Y_2",
+    "tBodyAccJerk_std_X",
+    "tGravityAcc_min_Z",
+    "fBodyAccJerk_bandsEnergy_1_24",
+    "fBodyAccJerk_max_X",
+    "tGravityAcc_arCoeff_X_1",
+    "angle_Z_gravityMean",
+    "fBodyAccMag_std",
+    "fBodyAccMag_mean",
+    "tBodyAccJerkMag_mad",
+    "tGravityAcc_entropy_Y",
+    "tGravityAcc_arCoeff_Y_3",
+    "tGravityAcc_max_Z"
+  ],
+  "impurity_vs_permutation_spearman": -0.5107692307692308,
+  "mlp": {
+    "best_epoch": 9,
+    "best_val_macro_f1": 0.9495669145386257,
+    "train_subjects": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      18,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "val_subjects": [
+      1,
+      9,
+      12,
+      17,
+      19
+    ]
+  },
+  "hpo": {
+    "best_params": {
+      "n_estimators": 150,
+      "min_samples_leaf": 2,
+      "max_features": "log2",
+      "max_depth": 25
+    },
+    "cv_macro_f1": 0.9260896936045789,
+    "test_macro_f1": 0.9443515153784059,
+    "mlflow_run_id": "53dbfe814b8c42a48e5950e193ff3d24"
+  },
+  "environment": {
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "python": "3.13.18",
+    "logical_cpu_cores": 2,
+    "torch_version": "2.15.0+cu132",
+    "pytorch_training_device": "cpu",
+    "gpu": "none"
+  },
+  "benchmark_notes": "CPU, single thread, median of repeated single-window predictions after warm-up, one batch of up to 1000 test windows. Timings are hardware-dependent.",
+  "checks": {
+    "train_test_subjects_disjoint": true,
+    "test_subjects_as_configured": true,
+    "mlp_validation_within_development_data": true,
+    "hpo_used_grouped_cv": true,
+    "all_models_benchmarked": true
+  }
+}
